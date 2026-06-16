@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+#navbar.scrolled {
+    background: #1e3a8a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: white;
+    color: #1e3a8a;
+    border-radius: 25px;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+#about {
+    background: #f8fafc;
+}
+
+#services {
+    background: #e2e8f0;
+}
+
+#portfolio {
+    background: #cbd5e1;
+}
+
+#contact {
+    background: #94a3b8;
+    color: white;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+}
